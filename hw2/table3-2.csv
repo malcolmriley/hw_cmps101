@@ -1,0 +1,7 @@
+A,B,bigO,littleO,bigOmega,littleOmega,theta
+$\lg^k(n)$,$n^\epsilon$,YES,YES,NO,NO,NO
+$n^k$,$c^n$,YES,YES,NO,NO,NO
+$\sqrt{n}$,$n^{sin(n)}$,NO,NO,NO,NO,NO
+$2^n$,$2^{n/2}$,NO,NO,YES,YES,NO
+$n^{\lg(c)}$,$c^{\lg(n)}$,YES,NO,YES,NO,YES
+$\lg(n!)$,$\lg(n^n)$,YES,NO,YES,NO,YES

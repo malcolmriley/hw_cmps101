@@ -1,0 +1,18 @@
+\begin{proof}
+It must be demonstrated that for any real constants $a$ and $b$ that if $b > 0$, then $(n+a)^b = \Theta(n^b)$.
+The following properties will be used:
+\begin{enumerate}
+	\itemlabel{prop:theta}{Property of $\Theta(f(n))$ for Polynomials}
+		For a polynomial $f(n)$ whose leading term is $a \cdot n^b$ for some real numbers $a$ and $b$, $f(n) = \Theta(n^b)$.
+	\itemlabel{thm:binom}{The Binomial Theorem}
+		\begin{equation*}
+			(a+b)^n = \sum_{k=0}^n \binom{n}{k} a^{n-k} b^k
+		\end{equation*}
+\end{enumerate}
+\begin{itemize}
+	\item By theorem \ref{thm:binom}, the expression $(n + a)^b$ evaluates to a polynomial whose leading term is $ \binom{n}{0} n^{b-0} a^0 $
+	\item The polynomial obtained previously may be evaluated to a polynomial of leading term $ n^b $. Let this polynomial be represented by $f(n^b)$.
+	\item By property \ref{prop:theta}, $ f(n^b) = \Theta(n^b) $.
+	\item Thus, the desired relation is established.
+\end{itemize}
+\end{proof}

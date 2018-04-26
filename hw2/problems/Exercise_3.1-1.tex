@@ -1,0 +1,28 @@
+
+\begin{proof}
+It must be demonstrated that for two asymptotically nonnegative functions $f(n)$ and $g(n)$, $\max( f(n), g(n) ) = \Theta(f(n) + g(n))$. 
+The following properties will be used:
+\begin{enumerate}
+	\itemlabel{def:theta}{Definition of $\Theta(n)$}
+		\begin{equation*}
+			\Theta(g(n)) = \{ f(n) : \exists c_1, c_2, n_0 \mid 0 \leq c_1 \cdot g(n) \leq f(n) \leq c_2 \cdot g(n), \forall n \geq n_0 \}
+		\end{equation*}
+		In other words, a function $ f(n) $ belongs to the set $\Theta(g(n))$ if there exist some constants $c_1$ and $c_2$ such that for 
+all increasing values of $n$, the value of $f(n)$ falls between $c_1 \cdot g(n)$ and $c_2 \cdot g(n)$, inclusive.
+	\itemlabel{def:max}{Definition of $\max(a, b)$}
+		\begin{equation*}
+			\max(a, b) =
+			\begin{cases} a & \when a \geq b \\ b & \when a < b \end{cases}
+		\end{equation*}
+		The $\max(a,b)$ function returns the greater of its two parameters.
+\end{enumerate}
+\begin{itemize}
+	\item It is given that $f(n)$ and $g(n)$ are asymptotically nonnegative. Therefore, for any asymptotically-relevant value of $n$, the values of $f(n)$ and $g(n)$ are also non-negative.
+	\item For any two nonnegative real numbers $m$ and $n$, $ m+n \geq m \geq n$. Thus, $f(n) + g(n) \geq f(n) \geq g(n)$.
+	\item Suppose $f(n) > g(n)$. By definition \ref{def:max}, $\max(m, n)$ will equal the greater of $m$ and $n$. Thus, $\max(f(n), g(n))$ will equal $f(n)$ or $g(n)$.
+	\item For any two nonnegative real numbers $m$ and $n$, if $m \geq n$, then $m \leq m + n \leq m + m$.
+	\item Rearranging the previous gives $m \leq m + n \leq 2m$.
+	\item By \ref{def:max} and the previous, the following equation is obtained: $\max(f(n), g(n)) \leq f(n) + g(n) \leq 2\max(f(n), g(n))$. This equation is a version of definition \ref{def:theta}, for constants $c_1 = 1$ and $c_2 = 2$.
+	\item Thus, the desired relation is established.
+\end{itemize}
+\end{proof}

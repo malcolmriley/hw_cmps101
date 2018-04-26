@@ -1,0 +1,12 @@
+For constant values $k \geq 1$, $\epsilon > 0$, $c > 1$:
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\csvreader[
+		tabular=V{3}c|cV{3}c|c|c|c|cV{3},
+		table head= \hlineB{3} A & B & O & o & $\Omega$ & $\omega$ & $\Theta$ \\ \hlineB{3},
+		head to column names,
+		late after line=\\ \hline,
+		late after last line=\\ \hlineB{3}
+		]
+	{table3-2.csv}{}{\A & \B & \bigO & \littleO & \bigOmega & \littleOmega & \theta }
+\end{center}

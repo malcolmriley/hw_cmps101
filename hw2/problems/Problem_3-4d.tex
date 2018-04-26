@@ -1,0 +1,1 @@
+It is untrue that $ f(n) = O(g(n)) \implies 2^{f(n)} = O(2^{g(n)}) $. For instance, $ f(n) $ may be a polynomial of the same leading term exponent as $ g(n) $, but with a greater coefficient to that term. For a specific counterexample, let $ f(n) = 5n $ and let $ g(n) = n $. Both $ f(n) $ and $ g(n) $ belong to $ O(n) $ but $ 2^n $ and $ 2^{5n} $ do not both belong to $ O(2^n) $.
