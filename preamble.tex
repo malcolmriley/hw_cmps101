@@ -1,0 +1,26 @@
+% Include packages I use often
+\usepackage{geometry}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{csvsimple}
+\usepackage{boldline}
+
+\geometry{letterpaper}
+
+% Define problem and exercise commands.
+% They take a parameter which defines the problem number, which is also the filename.
+\newcommand{\prob}[2]{\section*{#1 #2} \par \input{./problems/#1_#2.tex}}
+\newcommand{\problem}[1]{\prob{Problem}{#1}}
+\newcommand{\exercise}[1]{\prob{Exercise}{#1}}
+
+% Declare "when" operator for piecewise functions
+\DeclareMathOperator{\when}{when}
+
+% Declare commands for proofs
+\newcommand{\comma}{\;,\;}
+\newcommand{\itemlabel}[2]{\item \label{#1} \textbf{#2:} }
+\renewcommand{\qedsymbol}{$\blacksquare$} 
+
+% Header Command
+\newcommand{\preparetitle}[1]{\title{\textbf{Homework \##1}} \author{Malcolm Riley} \date{CMPS101 Spring 2018}}
