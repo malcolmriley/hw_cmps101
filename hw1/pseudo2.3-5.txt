@@ -1,0 +1,12 @@
+Let A be an array sorted in ascending order (least to greatest)
+define function BinarySearch(array, value):
+	set n = floor(array.length / 2)
+	if array[n] == value do:
+		return n;
+	if array[n] > value do:
+		set B = subarray of array[0 to n]
+		BinarySearch(B, value)
+	if array[n] < value do:
+		set B = subarray of array[n to array.length]
+		BinarySearch(B, value)
+	return NIL;

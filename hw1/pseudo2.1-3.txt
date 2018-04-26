@@ -1,0 +1,4 @@
+for i = 0 to the length of A do:
+	if A[i] = v do:
+		return i
+return NIL

@@ -1,0 +1,9 @@
+for n = 0 to A.length do:
+	set l = INFINITY
+	set i = NIL
+	for m = n to A.length do:
+		if A[m] < l do:
+			set l = A[m]
+			set i = m
+	if i != NIL do:
+		swap A[n] with A[i]
