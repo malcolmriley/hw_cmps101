@@ -1,1 +1,5 @@
-Filler Text
+The definition of $ \Theta(n^2) $, it needs to be demonstrated that $ \exists c_1, c_2 \mid c_1 \cdot n^2 \leq T(n) \leq c_2 \cdot n^2 $. The function $ T(n) $ is defined as $ T(n) = T(n-1) + \Theta(n) $. Using the substitution method:
+\begin{equation*}
+c_1 \cdot n^2 \leq c_1 \cdot (n-1)^2 + c_1 \cdot n \leq T(n-1) + \Theta(n) \leq c_2 \cdot (n-1)^2 + c_2 \cdot n \leq c_2 \cdot n^2
+\end{equation*}
+Thus the required property is demonstrated.
