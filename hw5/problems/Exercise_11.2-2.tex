@@ -1,0 +1,12 @@
+For the set of keys $ \{5, 28, 19, 15, 20, 33, 12, 17, 10\} $ and hashing function $ h(n) = k \bmod 9 $ with collisions resolved by chaining, the resulting table will resemble:
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\csvreader[
+		tabular = V{3}c|cV{3},
+		table head = \hlineB{3} Index: $ h(n) $ & Contents: $ T \lbrack h(n) \rbrack $ \\ \hlineB{3},
+		head to column names,
+		late after line = \\ \hline,
+		late after last line = \\ \hlineB{3}
+	]
+	{table11.2-2.csv}{}{ \index & \contents }
+\end{center}
