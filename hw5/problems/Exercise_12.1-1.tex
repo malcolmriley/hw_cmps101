@@ -1,0 +1,87 @@
+\tikzset{
+	every tree node/.style = { minimum width=2.2em, draw, circle },
+	edge from parent/.style = { draw, edge from parent path= { (\tikzparentnode) -- (\tikzchildnode) } },
+	edge from parent path/.append style = { -> },
+	level distance = 1.25cm 
+}
+
+\newcommand{\inlineTikz}[2]{\begin{SCfigure}[2][htb] \begin{tikzpicture} #2 \end{tikzpicture} \caption*{#1} \end{SCfigure} }
+
+For the set of $ \{ 1, 4, 5, 10, 16, 17, 21 \} $, the following binary search trees may be created.
+\inlineTikz{Height of 2:}{
+	\Tree
+	[.10
+		[.4
+			[.1 ]
+			[.5 ]
+		]
+		[.17 
+			[.16 ]
+			[.21 ]
+		]
+	]
+}
+
+\inlineTikz{Height of 3:}{
+	\Tree
+	[.10
+		[.5
+			[.4
+				[.1 ]
+			]
+		]
+		[.17 
+			[.16 ]
+			[.21 ]
+		]
+	]
+}
+
+\inlineTikz{Height of 4:}{
+	\Tree
+	[.16
+		[.10
+			[.5
+				[.4
+					[.1 ]
+				]
+			]
+		]
+		[.17
+			[.21 ]
+		]
+	]
+}
+
+\inlineTikz{Height of 5:}{
+	\Tree
+	[.17
+		[.16 
+			[.10
+				[.5
+					[.4
+						[.1 ]
+					]
+				]
+			]
+		]
+		[.21 ]
+	]
+}
+
+\inlineTikz{Height of 6: }{
+	\Tree
+	[.21
+		[.17
+			[.16 
+				[.10
+					[.5
+						[.4
+							[.1 ]
+						]
+					]
+				]
+			]
+		]
+	]
+}
