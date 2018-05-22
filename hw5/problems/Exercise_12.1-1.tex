@@ -5,9 +5,10 @@
 	level distance = 1.25cm 
 }
 
-\newcommand{\inlineTikz}[2]{\begin{SCfigure}[2][htb] \begin{tikzpicture} #2 \end{tikzpicture} \caption*{#1} \end{SCfigure} }
+\newcommand{\inlineTikz}[2]{\textbf{#1} \begin{tikzpicture} #2 \end{tikzpicture} }
 
 For the set of $ \{ 1, 4, 5, 10, 16, 17, 21 \} $, the following binary search trees may be created.
+\begin{center}
 \inlineTikz{Height of 2:}{
 	\Tree
 	[.10
@@ -85,3 +86,4 @@ For the set of $ \{ 1, 4, 5, 10, 16, 17, 21 \} $, the following binary search tr
 		]
 	]
 }
+\end{center}
