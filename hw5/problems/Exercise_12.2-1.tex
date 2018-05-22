@@ -1,0 +1,13 @@
+Given the binary search tree properties, it should be true that for values $ l = \textsc{LeftChild}(n) $ and $ r = \textsc{RightChild}(n) $, $ l \leq n \leq r $. Therefore, for the provided arrays $ \textsc{A}_x $, it should be true that for each entry $ n = \textsc{A}_x[i] $, if $ n \leq 363 $ then all successive values in the array less than or equal to $ 363 $ should be less than or equal to $ n $, since we will choose the left subtree of $ n $. Likewise, it should be true that if $ n \geq 363 $ then all successive values greater than or equal to $ 363 $ should be greater than $ n $, since we will choose the right subtree of $ n $. Put another way, the following property should be upheld: for all $ n_i $ in $ \textsc{A}_x $, if $ n_i \leq 363 $, then all $ n_{i+k} \geq n_i $ and if $ n_i \geq 363 $ then all $ n_{i+k} \leq n_i $ for any positive integer $ k $.
+
+This property is most easily visualized by arranging each array into two subarrays containing elements greater than 363 and less than 363, respectively. The first array should never have increasing subsequent values, whilst the second should never have decreasing subsequent values.
+\newcommand{\listarrays}[2]{\item For $ n \geq 363 $: $ \{ #1 \} $, for $ n \leq 363 $: $ \{ #2 \} $}
+\begin{enumerate}[(a)]
+	\listarrays{ 401, 398, 397 }{ 2, 252, 330, 344 }
+	\listarrays{ 924, 911, 898 }{ 220, 244, 258, 362 }
+	\listarrays{ 925, 911, 912 }{ 202, 240, 245 }
+	\listarrays{ 399, 387, 382, 381 }{ 2, 219, 266, 278 }
+	\listarrays{ 935, 621, 392 }{ 278, 347, 299, 358 }
+\end{enumerate}
+
+As can be seen, this property is violated by arrays \textbf{c} and \textbf{e}: in $ \textsc{A}_c \; (n \geq 363) $ the value 912 occurs after 911, and in $ \textsc{A}_e \; (n \leq 363) $ 299 occurs after 347.
