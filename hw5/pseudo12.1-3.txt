@@ -1,4 +1,8 @@
-for i = 0 to the length of A do:
-	if A[i] = v do:
-		return i
-return NIL
+Add all x in TREE to STACK
+while STACK is not empty:
+	let x = STACK.pop()
+	VISIT(x)
+	if x.LEFT exists:
+		STACK.push(x.LEFT)
+	if x.RIGHT exists:
+		STACK.push(x.RIGHT)
