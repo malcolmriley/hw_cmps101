@@ -1,0 +1,13 @@
+let y = x.left
+set x.left to y.right
+if (y.right != NIL)
+	set y.right.parent to x
+set y.parent to x.parent
+if (x.parent == NIL)
+	set T.root to y
+else if (x == x.parent.right)
+	set x.parent.right to y
+else
+	set x.parent.left to y
+set y.right to x
+set x.parent to y
