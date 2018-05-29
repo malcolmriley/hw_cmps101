@@ -1,0 +1,11 @@
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\csvreader[
+		tabular = V{3}c|c|cV{3},
+		table head = \hlineB{3} Vertex & $ \pi $ & $ d $ \\ \hlineB{3},
+		head to column names,
+		late after line = \\ \hline,
+		late after last line = \\ \hlineB{3}
+	]
+	{table22.2-3.csv}{}{ \vertex & \predecessor & \discovery }
+\end{center}
