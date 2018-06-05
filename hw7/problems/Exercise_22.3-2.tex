@@ -1,0 +1,29 @@
+When performing \textsc{DFS} on Figure 22.3, the following values are recorded for each vertex:
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\csvreader[
+		tabular = V{3}c|c|cV{3},
+		table head = \hlineB{3} \textbf{Vertex} & \textbf{Discovery} & \textbf{Finish} \\ \hlineB{3},
+		head to column names,
+		late after line = \\ \hline,
+		late after last line = \\ \hlineB{3}
+	]
+	{table22.3-2_1.csv}{}{ \vertex & \discovery & \finish }
+\end{center}
+
+And the following edge classifications are made:
+
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\csvreader[
+		tabular = V{3}c|cV{3},
+		table head = \hlineB{3} \textbf{Class} & \textbf{Edges} \\ \hlineB{3},
+		head to column names,
+		late after line = \\ \hline,
+		late after last line = \\ \hlineB{3}
+	]
+	{table22.3-2_2.csv}{}{ \textbf{ \type } & $ \edge $ }
+\end{center}
+
+The graph contains no forward edges.
